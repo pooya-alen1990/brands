@@ -18,7 +18,7 @@ public class Category   {
 
     /*Properties*/
     @DatabaseField(columnDefinition = "categories_ID")
-    public int id;
+    public double id;
 
     @DatabaseField(columnDefinition = "categories_Name")
     public String name;

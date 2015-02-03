@@ -18,7 +18,7 @@ public class Brand {
 
     /*Properties*/
     @DatabaseField(columnDefinition = "brands_ID")
-    public int id;
+    public double id;
 
     @DatabaseField(columnDefinition = "brands_Name")
     public String name;
