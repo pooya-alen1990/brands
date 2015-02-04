@@ -1,9 +1,16 @@
 package ir.rayweb.app.brands;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import ir.rayweb.app.brands.Business.CategoryBusiness;
+import ir.rayweb.app.brands.Model.Category;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +19,25 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CategoryBusiness test=new CategoryBusiness(this.getBaseContext());
+        Category cat=new Category();
+        cat.id=1;
+        cat.name="test";
+        cat.active=true;
+        try {
+            test.createCategory(cat);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        List<Category> category= null;
+        try {
+            category = test.getAllCategory();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        TextView tv=(TextView) findViewById(R.id.MainText);
+        tv.setText(category.get(0).name);
     }
 
 
