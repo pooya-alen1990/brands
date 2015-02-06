@@ -7,15 +7,15 @@ import com.j256.ormlite.dao.Dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import ir.rayweb.app.brands.Model.Advertise;
+import ir.rayweb.app.brands.Model.Shop;
 
 /**
- * Created by parsa on 2/4/2015.
+ * Created by parsa on 2/6/2015.
  */
-public class AdvertiseRepository {
+public class ShopRepository {
     private DatabaseHelper databaseHelper;
-    Dao<Advertise, Integer> advertiseDao;
-    public AdvertiseRepository(Context context)
+    Dao<Shop, Integer> shopDao;
+    public ShopRepository(Context context)
     {
         try {
             DatabaseManager dbManager = new DatabaseManager();
@@ -23,16 +23,16 @@ public class AdvertiseRepository {
 
             databaseHelper = dbManager.getHelper(context);
             databaseHelper.getWritableDatabase();
-            advertiseDao = databaseHelper.getAdvertiseDao();
+            shopDao = databaseHelper.getShopDao();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
 
     }
-    public int createAdvertise(Advertise advertise) throws SQLException {
+    public int createShop(Shop shop) throws SQLException {
         try {
-            return advertiseDao.create(advertise);
+            return shopDao.create(shop);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -44,20 +44,20 @@ public class AdvertiseRepository {
         }
         return 0;
     }
-    public int updateAdvertise(Advertise advertise)
+    public int updateShop(Shop shop)
     {
         try {
-            return advertiseDao.update(advertise);
+            return shopDao.update(shop);
         } catch (SQLException e) {
             // TODO: Exception Handling
 
         }
         return 0;
     }
-    public int deleteAdvertise(Advertise advertise)
+    public int deleteShop(Shop shop)
     {
         try {
-            return advertiseDao.delete(advertise);
+            return shopDao.delete(shop);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -65,20 +65,20 @@ public class AdvertiseRepository {
         return 0;
     }
 
-    public List<Advertise> getAllAdvertises()
+    public List<Shop> getAllShop()
     {
         try {
-            return advertiseDao.queryForAll();
+            return shopDao.queryForAll();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
         return null;
     }
-    public Advertise getAdvertiseById(int id)
+    public Shop getShopById(int id)
     {
         try {
-            return advertiseDao.queryForId(id);
+            return shopDao.queryForId(id);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();

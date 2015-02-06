@@ -7,15 +7,15 @@ import com.j256.ormlite.dao.Dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import ir.rayweb.app.brands.Model.Advertise;
+import ir.rayweb.app.brands.Model.Brand;
 
 /**
- * Created by parsa on 2/4/2015.
+ * Created by parsa on 2/6/2015.
  */
-public class AdvertiseRepository {
+public class BrandRepository {
     private DatabaseHelper databaseHelper;
-    Dao<Advertise, Integer> advertiseDao;
-    public AdvertiseRepository(Context context)
+    Dao<Brand, Integer> brandDao;
+    public BrandRepository(Context context)
     {
         try {
             DatabaseManager dbManager = new DatabaseManager();
@@ -23,16 +23,16 @@ public class AdvertiseRepository {
 
             databaseHelper = dbManager.getHelper(context);
             databaseHelper.getWritableDatabase();
-            advertiseDao = databaseHelper.getAdvertiseDao();
+            brandDao = databaseHelper.getBrandDao();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
 
     }
-    public int createAdvertise(Advertise advertise) throws SQLException {
+    public int createBrand(Brand brand) throws SQLException {
         try {
-            return advertiseDao.create(advertise);
+            return brandDao.create(brand);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -44,20 +44,20 @@ public class AdvertiseRepository {
         }
         return 0;
     }
-    public int updateAdvertise(Advertise advertise)
+    public int updateBrand(Brand brand)
     {
         try {
-            return advertiseDao.update(advertise);
+            return brandDao.update(brand);
         } catch (SQLException e) {
             // TODO: Exception Handling
 
         }
         return 0;
     }
-    public int deleteAdvertise(Advertise advertise)
+    public int deleteBrand(Brand brand)
     {
         try {
-            return advertiseDao.delete(advertise);
+            return brandDao.delete(brand);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -65,20 +65,20 @@ public class AdvertiseRepository {
         return 0;
     }
 
-    public List<Advertise> getAllAdvertises()
+    public List<Brand> getAllBrand()
     {
         try {
-            return advertiseDao.queryForAll();
+            return brandDao.queryForAll();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
         return null;
     }
-    public Advertise getAdvertiseById(int id)
+    public Brand getBrandById(int id)
     {
         try {
-            return advertiseDao.queryForId(id);
+            return brandDao.queryForId(id);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();

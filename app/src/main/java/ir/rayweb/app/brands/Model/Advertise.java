@@ -49,4 +49,7 @@ public class Advertise {
 
     @DatabaseField(columnDefinition = "advertises_IsSendDetail")
     public Boolean isSendDetail;
+
+    @DatabaseField(columnDefinition = "advertise_IsNew")
+    public Boolean isNew;
 }

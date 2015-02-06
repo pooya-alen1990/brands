@@ -33,7 +33,7 @@ public class DatabaseHelper  extends OrmLiteSqliteOpenHelper {
     private Dao<Category,Integer> categoryDao = null;
     private Dao<Advertise,Integer> advertiseDao = null;
     private Dao<Brand,Integer> brandDao = null;
-    private Dao<BrandCategory,Integer> barndCategoryDao = null;
+    private Dao<BrandCategory,Integer> brandCategoryDao = null;
     private Dao<Shop,Integer> shopDao = null;
     private Dao<ShopBrand,Integer> shopBrandDao = null;
     private RuntimeExceptionDao<Category, Integer> categoryRuntimeDao = null;
@@ -153,6 +153,115 @@ public class DatabaseHelper  extends OrmLiteSqliteOpenHelper {
             advertiseRuntimeDao = getRuntimeExceptionDao(Advertise.class);
         }
         return advertiseRuntimeDao;
+    }
+    public Dao<Brand,Integer> getBrandDao() throws SQLException {
+        try
+        {
+            if (brandDao == null) {
+
+                brandDao =getDao (Brand.class);
+            }
+
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+
+        return brandDao;
+    }
+
+    /**
+     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our SimpleData class. It will
+     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
+     */
+    public RuntimeExceptionDao<Brand, Integer> getBrandDataDao() {
+        if (brandRuntimeDao == null) {
+            brandRuntimeDao = getRuntimeExceptionDao(Brand.class);
+        }
+        return brandRuntimeDao;
+    }
+
+    public Dao<BrandCategory,Integer> getBrandCategoryDao() throws SQLException {
+        try
+        {
+            if (brandCategoryDao == null) {
+
+                brandCategoryDao =getDao (BrandCategory.class);
+            }
+
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+
+        return brandCategoryDao;
+    }
+
+    /**
+     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our SimpleData class. It will
+     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
+     */
+    public RuntimeExceptionDao<BrandCategory, Integer> getBrandCategoryDataDao() {
+        if (brandCategoryRuntimeDao == null) {
+            brandCategoryRuntimeDao = getRuntimeExceptionDao(BrandCategory.class);
+        }
+        return brandCategoryRuntimeDao;
+    }
+    public Dao<Shop,Integer> getShopDao() throws SQLException {
+        try
+        {
+            if (shopDao == null) {
+
+                shopDao =getDao (Shop.class);
+            }
+
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+
+        return shopDao;
+    }
+
+    /**
+     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our SimpleData class. It will
+     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
+     */
+    public RuntimeExceptionDao<Shop, Integer> getShopDataDao() {
+        if (shopRuntimeDao == null) {
+            shopRuntimeDao = getRuntimeExceptionDao(Shop.class);
+        }
+        return shopRuntimeDao;
+    }
+    public Dao<ShopBrand,Integer> getShopBrandDao() throws SQLException {
+        try
+        {
+            if (shopBrandDao == null) {
+
+                shopBrandDao =getDao (ShopBrand.class);
+            }
+
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+
+        return shopBrandDao;
+    }
+
+    /**
+     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our SimpleData class. It will
+     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
+     */
+    public RuntimeExceptionDao<ShopBrand, Integer> getShopBrandDataDao() {
+        if (shopBrandRuntimeDao == null) {
+            shopBrandRuntimeDao = getRuntimeExceptionDao(ShopBrand.class);
+        }
+        return shopBrandRuntimeDao;
     }
     /**
      * Close the database connections and clear any cached DAOs.

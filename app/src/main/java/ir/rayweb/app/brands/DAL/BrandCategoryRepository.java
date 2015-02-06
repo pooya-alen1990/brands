@@ -7,15 +7,15 @@ import com.j256.ormlite.dao.Dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import ir.rayweb.app.brands.Model.Advertise;
+import ir.rayweb.app.brands.Model.BrandCategory;
 
 /**
- * Created by parsa on 2/4/2015.
+ * Created by parsa on 2/6/2015.
  */
-public class AdvertiseRepository {
+public class BrandCategoryRepository {
     private DatabaseHelper databaseHelper;
-    Dao<Advertise, Integer> advertiseDao;
-    public AdvertiseRepository(Context context)
+    Dao<BrandCategory, Integer> brandCategoryDao;
+    public BrandCategoryRepository(Context context)
     {
         try {
             DatabaseManager dbManager = new DatabaseManager();
@@ -23,16 +23,16 @@ public class AdvertiseRepository {
 
             databaseHelper = dbManager.getHelper(context);
             databaseHelper.getWritableDatabase();
-            advertiseDao = databaseHelper.getAdvertiseDao();
+            brandCategoryDao = databaseHelper.getBrandCategoryDao();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
 
     }
-    public int createAdvertise(Advertise advertise) throws SQLException {
+    public int createBrandCategory(BrandCategory brandCategory) throws SQLException {
         try {
-            return advertiseDao.create(advertise);
+            return brandCategoryDao.create(brandCategory);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -44,20 +44,20 @@ public class AdvertiseRepository {
         }
         return 0;
     }
-    public int updateAdvertise(Advertise advertise)
+    public int updateBrandCategory(BrandCategory brandCategory)
     {
         try {
-            return advertiseDao.update(advertise);
+            return brandCategoryDao.update(brandCategory);
         } catch (SQLException e) {
             // TODO: Exception Handling
 
         }
         return 0;
     }
-    public int deleteAdvertise(Advertise advertise)
+    public int deleteBrandCategory(BrandCategory brandCategory)
     {
         try {
-            return advertiseDao.delete(advertise);
+            return brandCategoryDao.delete(brandCategory);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
@@ -65,20 +65,20 @@ public class AdvertiseRepository {
         return 0;
     }
 
-    public List<Advertise> getAllAdvertises()
+    public List<BrandCategory> getAllBrandCategory()
     {
         try {
-            return advertiseDao.queryForAll();
+            return brandCategoryDao.queryForAll();
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
         }
         return null;
     }
-    public Advertise getAdvertiseById(int id)
+    public BrandCategory getBrandCategoryById(int id)
     {
         try {
-            return advertiseDao.queryForId(id);
+            return brandCategoryDao.queryForId(id);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();
