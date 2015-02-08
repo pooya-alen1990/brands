@@ -44,6 +44,20 @@ public class BrandRepository {
         }
         return 0;
     }
+    public Brand createBrandIfNotExist(Brand brand) throws SQLException {
+        try {
+            return brandDao.createIfNotExists(brand);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
+    }
     public int updateBrand(Brand brand)
     {
         try {

@@ -17,12 +17,12 @@ public class Brand {
     public  static final String Column_Active="brands_Active";*/
 
     /*Properties*/
-    @DatabaseField(columnDefinition = "brands_ID")
-    public double id;
+    @DatabaseField(columnDefinition = "brands_ID",id = true ,columnName = "brands_ID")
+    public int id;
 
-    @DatabaseField(columnDefinition = "brands_Name")
+    @DatabaseField(columnDefinition = "brands_Name",columnName = "brands_Name")
     public String name;
 
-    @DatabaseField(columnDefinition = "brands_Active")
+    @DatabaseField(columnDefinition = "brands_Active",columnName = "brands_Active")
     public Boolean active;
 }

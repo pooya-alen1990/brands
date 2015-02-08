@@ -36,6 +36,16 @@ public class ShopBusiness {
             throw e;
         }
     }
+    public Shop createShopIfNotExist(Shop shop) throws SQLException {
+        try
+        {
+            return shopRepository.createShopIfNotExist(shop);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public  int updateShop(Shop shop) throws SQLException {
         try
         {

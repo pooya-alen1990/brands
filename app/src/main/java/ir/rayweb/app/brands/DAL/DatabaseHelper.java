@@ -94,11 +94,7 @@ public class DatabaseHelper  extends OrmLiteSqliteOpenHelper {
 
 
     }
-   /* public DatabaseHelper(Context context,Class<T> t)
-    {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        T_Class= t;
-    }*/
+
 
     public Dao<Category,Integer> getCategoryDao() throws SQLException {
         try

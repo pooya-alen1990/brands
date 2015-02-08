@@ -30,6 +30,7 @@ public class ShopRepository {
         }
 
     }
+
     public int createShop(Shop shop) throws SQLException {
         try {
             return shopDao.create(shop);
@@ -43,6 +44,20 @@ public class ShopRepository {
 
         }
         return 0;
+    }
+    public Shop createShopIfNotExist(Shop shop) throws SQLException {
+        try {
+            return shopDao.createIfNotExists(shop);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        return null;
     }
     public int updateShop(Shop shop)
     {

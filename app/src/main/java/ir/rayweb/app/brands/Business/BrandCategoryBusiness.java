@@ -36,6 +36,16 @@ public class BrandCategoryBusiness {
             throw e;
         }
     }
+    public BrandCategory createBrandCategoryIfNotExist(BrandCategory brandCategory) throws SQLException {
+        try
+        {
+            return brandCategoryRepository.createBrandCategoryIfNotExist(brandCategory);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public  int updateBrandCategory(BrandCategory brandCategory) throws SQLException {
         try
         {

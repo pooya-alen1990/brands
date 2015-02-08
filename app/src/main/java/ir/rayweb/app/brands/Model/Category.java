@@ -10,13 +10,13 @@ import com.j256.ormlite.table.DatabaseTable;
 public class Category {
 
     /*Properties*/
-    @DatabaseField(columnDefinition = "categories_ID")
-    public double id;
+    @DatabaseField(columnDefinition = "categories_ID",id = true,columnName = "categories_ID")
+    public int id;
 
-    @DatabaseField(columnDefinition = "categories_Name")
+    @DatabaseField(columnDefinition = "categories_Name",columnName = "categories_Name")
     public String name;
 
-    @DatabaseField(columnDefinition = "categories_Active")
+    @DatabaseField(columnDefinition = "categories_Active",columnName = "categories_Active")
     public Boolean active;
 
 

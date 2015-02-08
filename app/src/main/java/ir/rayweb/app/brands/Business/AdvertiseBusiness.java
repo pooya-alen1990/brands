@@ -36,6 +36,16 @@ public class AdvertiseBusiness {
             throw e;
         }
     }
+    public Advertise createAdvertiseIfNotExist(Advertise advertise) throws SQLException {
+        try
+        {
+            return advertiseRepository.createAdvertiseIfNotExist(advertise);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public  int updateAdvertise(Advertise advertise) throws SQLException {
         try
         {
@@ -70,6 +80,16 @@ public class AdvertiseBusiness {
         try
         {
             return  advertiseRepository.getAdvertiseById(id);
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+    }
+    public List<Advertise> getAdvertisesByBrandId(int id) {
+        try
+        {
+            return  advertiseRepository.getAdvertisesByBrandId(id);
         }
         catch (Exception e) {
             throw e;

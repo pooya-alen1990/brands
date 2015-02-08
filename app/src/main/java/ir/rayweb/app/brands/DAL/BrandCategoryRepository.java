@@ -44,6 +44,20 @@ public class BrandCategoryRepository {
         }
         return 0;
     }
+    public BrandCategory createBrandCategoryIfNotExist(BrandCategory brandCategory) throws SQLException {
+        try {
+            return brandCategoryDao.createIfNotExists(brandCategory);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        return null;
+    }
     public int updateBrandCategory(BrandCategory brandCategory)
     {
         try {

@@ -44,6 +44,20 @@ public class AdvertiseRepository {
         }
         return 0;
     }
+    public Advertise createAdvertiseIfNotExist(Advertise advertise) throws SQLException {
+        try {
+            return advertiseDao.createIfNotExists(advertise);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        return null;
+    }
     public int updateAdvertise(Advertise advertise)
     {
         try {
@@ -79,6 +93,17 @@ public class AdvertiseRepository {
     {
         try {
             return advertiseDao.queryForId(id);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<Advertise> getAdvertisesByBrandId(int brandId)
+    {
+        try {
+            return advertiseDao.queryForEq("advertises_BrandID",brandId);
         } catch (SQLException e) {
             // TODO: Exception Handling
             e.printStackTrace();

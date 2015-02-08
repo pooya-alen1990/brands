@@ -37,6 +37,16 @@ public class CategoryBusiness {
             throw e;
         }
     }
+    public Category createCategoryIfNotExist(Category category) throws SQLException {
+        try
+        {
+            return categoryRepository.createCategoryIfNotExist(category);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public  int updateCategory(Category category) throws SQLException {
         try
         {

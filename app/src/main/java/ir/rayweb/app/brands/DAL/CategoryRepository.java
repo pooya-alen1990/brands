@@ -44,6 +44,20 @@ public class CategoryRepository {
         }
         return 0;
     }
+    public Category createCategoryIfNotExist(Category category) throws SQLException {
+        try {
+            return categoryDao.createIfNotExists(category);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        return null;
+    }
     public int updateCategory(Category category)
     {
         try {
