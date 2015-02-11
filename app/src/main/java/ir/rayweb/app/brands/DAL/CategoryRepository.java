@@ -89,6 +89,16 @@ public class CategoryRepository {
         }
         return null;
     }
+    public List<Category> getAllActiveCategory()
+    {
+        try {
+            return categoryDao.queryForEq("categories_Active",true);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+        }
+        return null;
+    }
     public Category getCategoryById(int id)
     {
         try {

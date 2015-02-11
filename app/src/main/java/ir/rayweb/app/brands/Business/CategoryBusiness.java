@@ -77,6 +77,16 @@ public class CategoryBusiness {
             throw e;
         }
     }
+    public List<Category> getAllActiveCategory() throws SQLException {
+        try
+        {
+            return categoryRepository.getAllActiveCategory();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public Category getCategoryById(int id) {
     try
     {

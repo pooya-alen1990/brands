@@ -89,6 +89,16 @@ public class AdvertiseRepository {
         }
         return null;
     }
+    public List<Advertise> getAllActiveAdvertises()
+    {
+        try {
+            return advertiseDao.queryForEq("advertises_Active",true);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+        }
+        return null;
+    }
     public Advertise getAdvertiseById(int id)
     {
         try {

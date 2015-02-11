@@ -89,6 +89,16 @@ public class BrandRepository {
         }
         return null;
     }
+    public List<Brand> getAllActiveBrand()
+    {
+        try {
+            return brandDao.queryForEq("brands_Active",true);
+        } catch (SQLException e) {
+            // TODO: Exception Handling
+            e.printStackTrace();
+        }
+        return null;
+    }
     public Brand getBrandById(int id)
     {
         try {

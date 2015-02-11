@@ -76,6 +76,20 @@ public class AdvertiseBusiness {
             throw e;
         }
     }
+    public List<Advertise> getAllActiveAdvertise() throws SQLException {
+        try
+        {
+            List<Advertise> advertiseList= advertiseRepository.getAllActiveAdvertises();
+           /* for(int x = 10; x < advertiseList.size(); x = x+1) {
+              advertiseList.get(x).persianRegisterDate= Utility.getCurrentShamsidate(advertiseList.get(x).registerDate)
+            }*/
+            return advertiseList;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public Advertise getAdvertiseById(int id) {
         try
         {

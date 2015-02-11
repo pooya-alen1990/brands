@@ -76,6 +76,16 @@ public class BrandBusiness {
             throw e;
         }
     }
+    public List<Brand> getAllActiveBrand() throws SQLException {
+        try
+        {
+            return brandRepository.getAllActiveBrand();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public Brand getBrandById(int id) {
         try
         {

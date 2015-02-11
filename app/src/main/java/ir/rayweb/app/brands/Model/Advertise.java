@@ -26,6 +26,8 @@ public class Advertise {
     @DatabaseField(columnDefinition = "advertises_RegisterDate" , columnName = "advertises_RegisterDate")
     public Date registerDate;
 
+    public String persianRegisterDate;
+
     @DatabaseField(columnDefinition = "advertises_Active" ,columnName = "advertises_Active")
     public Boolean active;
 
