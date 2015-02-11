@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\parsa\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-core\4.48\e579bd2905d0399af5029aaaf9817d5fa0ca88a5\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-f67487e1c1645e5da91141632b2df16305b58151.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\classes-7a493e9fee4851e51a66b13c03f5c646cd7f0598.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-2ef799b3fe97c55dd6c80f7194fa91431a1a365e.jar" />
+    </item>
+    <item
+        jar="C:\Users\parsa\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48-a85210becc5e62ee9c9ab20a9179ac4f783cea79.jar" />
+    </item>
+    <item
+        jar="C:\Users\parsa\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48-a85210becc5e62ee9c9ab20a9179ac4f783cea79.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\classes-a6059720413de666d34190a969a6fa43cd570b48.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\component\Android\Android Sdk23\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0d6f6125c9cac8cd513140d25643931a2ccd1971.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-2ef799b3fe97c55dd6c80f7194fa91431a1a365e.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\classes-a6059720413de666d34190a969a6fa43cd570b48.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\GitHub\brands\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\classes-7a493e9fee4851e51a66b13c03f5c646cd7f0598.jar" />
+    </item>
+    <item
+        jar="C:\Users\parsa\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-core\4.48\e579bd2905d0399af5029aaaf9817d5fa0ca88a5\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-f67487e1c1645e5da91141632b2df16305b58151.jar" />
+    </item>
+    <item
+        jar="E:\parsa\parsa\component\Android\Android Sdk23\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\parsa\parsa\GitHub\brands\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0d6f6125c9cac8cd513140d25643931a2ccd1971.jar" />
+    </item>
+
+</items>
