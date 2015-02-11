@@ -13,6 +13,7 @@ import com.j256.ormlite.table.TableUtils;
 import java.sql.SQLException;
 
 import ir.rayweb.app.brands.Model.Advertise;
+import ir.rayweb.app.brands.Model.AdvertiseImage;
 import ir.rayweb.app.brands.Model.Brand;
 import ir.rayweb.app.brands.Model.BrandCategory;
 import ir.rayweb.app.brands.Model.Category;
@@ -36,12 +37,14 @@ public class DatabaseHelper  extends OrmLiteSqliteOpenHelper {
     private Dao<BrandCategory,Integer> brandCategoryDao = null;
     private Dao<Shop,Integer> shopDao = null;
     private Dao<ShopBrand,Integer> shopBrandDao = null;
+    private Dao<AdvertiseImage,Integer> advertiseImageDao = null;
     private RuntimeExceptionDao<Category, Integer> categoryRuntimeDao = null;
     private RuntimeExceptionDao<Advertise, Integer> advertiseRuntimeDao = null;
     private RuntimeExceptionDao<Brand, Integer> brandRuntimeDao = null;
     private RuntimeExceptionDao<BrandCategory, Integer> brandCategoryRuntimeDao = null;
     private RuntimeExceptionDao<Shop, Integer> shopRuntimeDao = null;
     private RuntimeExceptionDao<ShopBrand, Integer> shopBrandRuntimeDao = null;
+    private RuntimeExceptionDao<AdvertiseImage, Integer> advertiseImageRuntimeDao = null;
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
         try {
@@ -258,6 +261,34 @@ public class DatabaseHelper  extends OrmLiteSqliteOpenHelper {
             shopBrandRuntimeDao = getRuntimeExceptionDao(ShopBrand.class);
         }
         return shopBrandRuntimeDao;
+    }
+
+    public Dao<AdvertiseImage,Integer> getAdvertiseImageDao() throws SQLException {
+        try
+        {
+            if (advertiseImageDao == null) {
+
+                advertiseImageDao =getDao (AdvertiseImage.class);
+            }
+
+        }
+        catch (Exception e) {
+            throw e;
+        }
+
+
+        return advertiseImageDao;
+    }
+
+    /**
+     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our SimpleData class. It will
+     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
+     */
+    public RuntimeExceptionDao<AdvertiseImage, Integer> getAdvertiseImageDataDao() {
+        if (advertiseImageRuntimeDao == null) {
+            advertiseImageRuntimeDao = getRuntimeExceptionDao(AdvertiseImage.class);
+        }
+        return advertiseImageRuntimeDao;
     }
     /**
      * Close the database connections and clear any cached DAOs.
